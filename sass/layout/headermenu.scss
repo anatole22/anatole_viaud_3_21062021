@@ -1,0 +1,21 @@
+.header{
+    &__nav{ 
+        margin: 20px 0 10px 0;
+        &__logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__img{
+                height: 30px;
+                width: 170px;
+                margin: auto;
+            }
+        }
+    }
+    &__presentation{
+        height: 260px;
+        width: 100%;
+        background-image: url(../../pictures/restaurant/alafrancaise.jpg);
+        object-fit: ;
+    }
+}
