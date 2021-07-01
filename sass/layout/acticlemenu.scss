@@ -1,5 +1,33 @@
 .menu{
     background:#f6f6f6;
     border-radius: 40px 40px 0 0;
-    margin-top: -40px;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 35px 40px 20px;           
+    }
+    &__command{
+        align-self: center;
+        margin: 2.5px 0 80px 0;
+        width: 185px;
+        height: 50px;
+        border-radius: 40px;
+        color: white;
+        background:$colour-primary;
+        border: solid $colour-primary 1px;
+        box-shadow: 5px 5px 10px 1px lightgray;
+    }
+}
+.plats{
+    &__title{
+        display: flex;
+        align-self: flex-start;
+        margin: 0 0 17.5px 20px;
+        border-bottom: solid $colour-tertairy 3px;
+        width: 40px;
+        }
 }

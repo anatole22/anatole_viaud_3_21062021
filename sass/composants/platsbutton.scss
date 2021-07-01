@@ -16,11 +16,15 @@
         justify-content: space-around;
         align-items: flex-start;
         margin: 7.5px 0 7.5px 0;
-            &__description {
+        &__title{
+            margin: 0 0 0 5px;
+        }
+        &__description {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 97%;
+            width: 95%;
+            margin: 0 0 0 5px;
     }
     }
 }

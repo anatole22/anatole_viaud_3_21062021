@@ -1,14 +1,21 @@
 .header{
     &__nav{ 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         margin: 20px 0 10px 0;
         &__logo{
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             &__img{
                 height: 30px;
                 width: 170px;
                 margin: auto;
+            }
+            &__icon{
+                margin: 0 65px 0 25px;
+                color: #353535;
             }
         }
     }
@@ -16,6 +23,6 @@
         height: 260px;
         width: 100%;
         background-image: url(../../pictures/restaurant/alafrancaise.jpg);
-        object-fit: cover;
+        background-size: cover;
     }
 }

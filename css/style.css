@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -47,9 +48,31 @@ a {
   color: black;
 }
 
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   width: 375px;
   margin: auto;
+}
+
+h1 {
+  font-family: Shrikhand, sans-serif;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+p {
+  font-size: 0.85rem;
 }
 
 .plats {
@@ -72,19 +95,26 @@ body {
   align-items: flex-start;
   margin: 7.5px 0 7.5px 0;
 }
+.plats__button__title {
+  margin: 0 0 0 5px;
+}
 .plats__button__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 97%;
+  width: 95%;
+  margin: 0 0 0 5px;
 }
 
 .header__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin: 20px 0 10px 0;
 }
 .header__nav__logo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .header__nav__logo__img {
@@ -92,17 +122,71 @@ body {
   width: 170px;
   margin: auto;
 }
+.header__nav__logo__icon {
+  margin: 0 65px 0 25px;
+  color: #353535;
+}
 .header__presentation {
   height: 260px;
   width: 100%;
   background-image: url(../../pictures/restaurant/alafrancaise.jpg);
-  object-fit: cover;
+  background-size: cover;
 }
 
 .menu {
   background: #f6f6f6;
   border-radius: 40px 40px 0 0;
-  margin-top: -40px;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+}
+.menu__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 35px 40px 20px;
+}
+.menu__command {
+  align-self: center;
+  margin: 2.5px 0 80px 0;
+  width: 185px;
+  height: 50px;
+  border-radius: 40px;
+  color: white;
+  background: #9356DC;
+  border: solid #9356DC 1px;
+  box-shadow: 5px 5px 10px 1px lightgray;
+}
+
+.plats__title {
+  display: flex;
+  align-self: flex-start;
+  margin: 0 0 17.5px 20px;
+  border-bottom: solid #99E2D0 3px;
+  width: 40px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: #353535;
+  color: white;
+  height: 200px;
+  padding: 25px 0 0 25px;
+}
+.footer__logo {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+.footer__list__icon {
+  width: 15px;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

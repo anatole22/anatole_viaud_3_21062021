@@ -1,0 +1,22 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    background: #353535;
+    color: white;
+    height: 200px;
+    padding: 25px 0 0 25px;
+    &__logo{
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100px;
+        &__icon{
+            width: 15px;
+            margin-right: 10px;
+        }
+    }
+}
