@@ -83,27 +83,63 @@ p {
   margin: 0 0 40px 0;
 }
 .plats__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: white;
   width: 350px;
   height: 70px;
   border-radius: 15px;
-  border: solid white 1px;
+  border: none;
   box-shadow: 5px 5px 10px 1px lightgray;
+  margin: 7.5px 0 7.5px 0;
+  padding: 0;
+  cursor: pointer;
+}
+.plats__button__commentaire {
+  width: 350px;
+  height: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-  margin: 7.5px 0 7.5px 0;
 }
-.plats__button__title {
-  margin: 0 0 0 5px;
+.plats__button__commentaire__title {
+  margin: 0 0 0 10px;
 }
-.plats__button__description {
+.plats__button__commentaire__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 95%;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 10px;
+}
+
+.confirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 70px;
+  padding-right: -15px;
+  border-radius: 0 15px 15px 0;
+  margin-left: 20px;
+  margin-right: -60px;
+  background: #99E2D0;
+  transition-duration: 0.5s;
+}
+.confirmation:active {
+  margin-right: 0;
+}
+.confirmation__icon {
+  background: #99E2D0;
+  color: white;
+  font-size: 20px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.confirmation__icon:active {
+  transform: rotate(0);
 }
 
 .header__nav {
@@ -153,9 +189,11 @@ p {
   height: 50px;
   border-radius: 40px;
   color: white;
-  background: #9356DC;
-  border: solid #9356DC 1px;
+  font-size: 1rem;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
   box-shadow: 5px 5px 10px 1px lightgray;
+  cursor: pointer;
 }
 
 .plats__title {
