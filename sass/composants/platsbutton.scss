@@ -47,14 +47,14 @@
             transform: rotate(-180deg);
             animation-delay: 300ms;
             transition: transform 200ms ease-in-out;
+            &:hover{
+                transform: rotate(0);
             }
-    
+            }
     }
     &:hover > &__confirmation{
         margin-right: 0;
-        &__icon{
-            transform: rotate(0deg);
-        }
+       
     }
 }
      

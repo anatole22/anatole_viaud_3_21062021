@@ -20,7 +20,7 @@
         font-size: 1rem;
         background: linear-gradient($colour-secondary,$colour-primary);
         border: none;
-        box-shadow: 5px 5px 10px 1px lightgray;
+        box-shadow: 5px 5px 5px 1px lightgray;
         cursor: pointer;
         &:hover{
             background: lighten($color: $colour-primary, $amount: 10%);
