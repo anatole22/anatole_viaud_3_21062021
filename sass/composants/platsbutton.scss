@@ -1,65 +1,60 @@
-.plats{
+.button {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 0 40px 0;
-    &__button {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: white;
+    background: white;
+    width: 350px;
+    height: 70px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 5px 5px 10px 1px lightgray;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    &__description{
         width: 350px;
-        height: 70px;
-        border-radius: 15px;
-        border: none;
-        box-shadow: 5px 5px 10px 1px lightgray;
-        margin: 7.5px 0 7.5px 0;
-        padding: 0;
-        cursor: pointer;
-        &__commentaire{
-            width: 350px;
-            height: 40px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        &__plat{
+            margin: 0 0 0 10px;
+        }
+        &__accompaniment{
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
-            align-items: flex-start;
-            &__title{
-                margin: 0 0 0 10px;
+            align-items: center;
+            width: 90%;
+            
+            margin: 0 0 0 10px;
+        }
+    }
+    &__confirmation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $colour-tertairy;
+        border-radius: 0 15px 15px 0;
+        width: 60px;
+        height: 70px;
+        margin-right: -60px;
+        transition: 300ms ease-in-out;
+        &__icon{
+            background: $colour-tertairy;
+            color: white;
+            font-size: 30px;
+            transform: rotate(-180deg);
+            animation-delay: 300ms;
+            transition: transform 200ms ease-in-out;
             }
-            &__description {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 95%;
-                margin: 0 0 0 10px;
-            }
+    
+    }
+    &:hover > &__confirmation{
+        margin-right: 0;
+        &__icon{
+            transform: rotate(0deg);
         }
     }
 }
-.confirmation{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 70px;
-    padding-right: -15px;
-    border-radius: 0 15px 15px 0;
-    margin-left: 20px;
-    margin-right: -60px;
-    background: $colour-tertairy;
-    transition-duration: 0.5s;
-        &:active{
-            margin-right: 0;
-        }
-        &__icon{
-        background: $colour-tertairy;
-        color: white;
-        font-size: 20px;
-        transform: rotate(180deg);
-        transition-duration: 0.5s;
-        &:active{
-            transform: rotate(0);
-        }
-        } 
-}
+     

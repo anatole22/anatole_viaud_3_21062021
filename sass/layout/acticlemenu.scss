@@ -22,9 +22,19 @@
         border: none;
         box-shadow: 5px 5px 10px 1px lightgray;
         cursor: pointer;
+        &:hover{
+            background: lighten($color: $colour-primary, $amount: 10%);
+            box-shadow: 5px 5px 10px 1px darken($color: lightgray, $amount: 30%);
+        }
     }
 }
 .plats{
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 40px 0;
     &__title{
         display: flex;
         align-self: flex-start;

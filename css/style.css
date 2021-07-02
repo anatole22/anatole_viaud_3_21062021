@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -75,16 +76,24 @@ p {
   font-size: 0.85rem;
 }
 
-.plats {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0 40px 0;
+.heart__black {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.2rem;
 }
-.plats__button {
+.heart__black:hover {
+  color: #F80303;
+  cursor: pointer;
+}
+.heart__black:hover::before {
+  content: "";
+  font-weight: bold;
+  transition: color 200ms ease-out;
+}
+
+.button {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: white;
   width: 350px;
@@ -92,11 +101,11 @@ p {
   border-radius: 15px;
   border: none;
   box-shadow: 5px 5px 10px 1px lightgray;
-  margin: 7.5px 0 7.5px 0;
   padding: 0;
   cursor: pointer;
+  overflow: hidden;
 }
-.plats__button__commentaire {
+.button__description {
   width: 350px;
   height: 40px;
   display: flex;
@@ -104,42 +113,40 @@ p {
   justify-content: space-between;
   align-items: flex-start;
 }
-.plats__button__commentaire__title {
+.button__description__plat {
   margin: 0 0 0 10px;
 }
-.plats__button__commentaire__description {
+.button__description__accompaniment {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
+  width: 90%;
   margin: 0 0 0 10px;
 }
-
-.confirmation {
+.button__confirmation {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
   width: 60px;
   height: 70px;
-  padding-right: -15px;
-  border-radius: 0 15px 15px 0;
-  margin-left: 20px;
   margin-right: -60px;
-  background: #99E2D0;
-  transition-duration: 0.5s;
+  transition: 300ms ease-in-out;
 }
-.confirmation:active {
-  margin-right: 0;
-}
-.confirmation__icon {
+.button__confirmation__icon {
   background: #99E2D0;
   color: white;
-  font-size: 20px;
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
+  font-size: 30px;
+  transform: rotate(-180deg);
+  animation-delay: 300ms;
+  transition: transform 200ms ease-in-out;
 }
-.confirmation__icon:active {
-  transform: rotate(0);
+.button:hover > .button__confirmation {
+  margin-right: 0;
+}
+.button:hover > .button__confirmation__icon {
+  transform: rotate(0deg);
 }
 
 .header__nav {
@@ -195,7 +202,19 @@ p {
   box-shadow: 5px 5px 10px 1px lightgray;
   cursor: pointer;
 }
+.menu__command:hover {
+  background: #ae80e5;
+  box-shadow: 5px 5px 10px 1px #878787;
+}
 
+.plats {
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 40px 0;
+}
 .plats__title {
   display: flex;
   align-self: flex-start;
@@ -225,6 +244,9 @@ p {
 .footer__list__icon {
   width: 15px;
   margin-right: 10px;
+}
+.footer__list__mail {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
