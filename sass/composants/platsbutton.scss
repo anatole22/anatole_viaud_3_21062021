@@ -45,16 +45,12 @@
             color: white;
             font-size: 30px;
             transform: rotate(-180deg);
-            animation-delay: 300ms;
-            transition: transform 200ms ease-in-out;
-            &:hover{
-                transform: rotate(0);
-            }
+            animation: cloche 200ms ease-in-out;
             }
     }
     &:hover > &__confirmation{
-        margin-right: 0;
-       
+        margin-right: 0;      
     }
 }
+
      

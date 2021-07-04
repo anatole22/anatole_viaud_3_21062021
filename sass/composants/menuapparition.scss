@@ -1,3 +1,36 @@
-.menu{
-    overflow: hidden;
+.plats{
+    animation: apparitionplats 2s ease-in-out;
+    
+}
+@keyframes apparitionplats {
+    0% {
+        height: 0px;
+        opacity: 0%;
+    }
+    80%{
+        opacity: 60%;
+    }
+    100%{
+        opacity: 100%;
+        height: 290px;
+    }
+}
+
+.header__main{
+    animation: lauchspin 3s ease-in-out;
+    
+}
+.main{
+    animation: lauchspin 3s ease-in-out;
+}
+@keyframes lauchspin {
+    0%{
+        opacity: 0;
+    }
+    99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
 }

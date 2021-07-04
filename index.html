@@ -9,8 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">    
     <script src="https://kit.fontawesome.com/b4b2f2557b.js" crossorigin="anonymous"></script>
 <body>
+    <div class="loader">
+        <div class="loader__logo">
+            <h1 class="loader__logo__title">Ohmyfood</h1>
+        </div>
+        <div class="loader__spin">
+            <i class="loader__spin__icon fas fas fa-utensils"></i>
+        </div>
+    </div>
     <header class="header__main">
-        <img class="header__main__logo" src="./pictures/logo/ohmyfood.png" alt="logo">
+        <div class="header__main__logo">
+            <img class="header__main__logo__img" src="./pictures/logo/ohmyfood.png" alt="logo">
+        </div>
         <div class="header__main__div">
             <i class="header__main__div__icon fas fa-map-marker-alt"></i> 
             <p>Paris, Belleville</p>
@@ -21,7 +31,7 @@
             <button class="header__main__nav__search">Explorer nos restaurants</button>
         </nav>
     </header>
-    <main>
+    <main class="main">
         <section class="fonctionnement">
             <h2 class="fonctionnement__title">Fonctionnement</h2>
             <ul class="fonctionnement__list">

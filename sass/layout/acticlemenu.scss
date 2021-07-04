@@ -23,8 +23,8 @@
         box-shadow: 5px 5px 5px 1px lightgray;
         cursor: pointer;
         &:hover{
-            background: lighten($color: $colour-primary, $amount: 10%);
-            box-shadow: 5px 5px 10px 1px darken($color: lightgray, $amount: 30%);
+            filter: brightness(110%);
+            box-shadow: 5px 5px 5px 1px darken($color: lightgray, $amount: 20%);
         }
     }
 }
