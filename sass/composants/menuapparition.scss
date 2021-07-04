@@ -15,22 +15,3 @@
         height: 290px;
     }
 }
-
-.header__main{
-    animation: lauchspin 3s ease-in-out;
-    
-}
-.main{
-    animation: lauchspin 3s ease-in-out;
-}
-@keyframes lauchspin {
-    0%{
-        opacity: 0;
-    }
-    99%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 100%;
-    }
-}

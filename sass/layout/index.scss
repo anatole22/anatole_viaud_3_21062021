@@ -1,0 +1,128 @@
+/* fonctionnement */
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 440px;
+    max-width: 375px;
+    margin: auto;
+    animation: swipe 3s ease-in-out both;
+    &__title{
+        margin-bottom: 30px;
+        align-self: flex-start;
+        margin-left: 20px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    &__list{
+        height: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &__button{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 75px;
+            width: 320px;
+            background-color: #f6f6f6;
+            border-radius: 25px;
+            box-shadow: 0px 1px 15px 1px lightgray;
+            &__number{
+                background-color: $colour-primary;
+                color: white;
+                border-radius: 100%;
+                font-size: 15px;
+                height: 25px;
+                width: 25px;
+                margin-left: -12.5px;
+                padding: 4px 0 0 8px;
+            }
+            &__icon{
+                color: #7e7e7e;
+                margin-left: 20px;
+                font-size: 20px;
+            }
+            &__description{
+                margin-left: 30px;
+                font-size: 15px;
+            }
+            &:hover{
+                background-color: #f5edff;
+            }
+            &:hover > &__icon{
+                color: $colour-primary;
+            }
+        }
+    }
+}
+/* restaurant */
+.restaurant__background{
+    background-color: #f6f6f6;
+    height: 1220px;
+    animation: swipe 3s ease-in-out both;
+}
+.restaurant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 375px;
+    height: 100%;
+    margin: auto;
+    padding-bottom: 70px;
+    &__title{
+        margin: 60px 0 0 20px;
+        align-self: flex-start;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        height: 250px;
+        width: 335px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px 1px lightgray;
+        &__img{
+            height: 175px;
+            &__back{
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+                height: 100%;
+                width: 100%;
+            }
+            &__new{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30px;
+                width: 80px;
+                background-color: $colour-tertairy;
+                color: darken($color: $colour-tertairy, $amount: 50%);
+                font-size: 15px;
+                border-radius: 5px;
+                position: relative;
+                top: -165px;
+                left: 245px;
+            }
+        }
+        &__name{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+            width: 85%;
+            margin-left: 15PX;
+            &__description{
+                height: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+}
