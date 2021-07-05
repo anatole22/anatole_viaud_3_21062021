@@ -1,0 +1,37 @@
+@mixin buttonfonctionnement {
+.fonctionnement__button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 75px;
+    width: 320px;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    box-shadow: $shadow-button;
+    &__number{
+        background-color: $colour-primary;
+        color: white;
+        border-radius: 100%;
+        font-size: 15px;
+        height: 25px;
+        width: 25px;
+        margin-left: -12.5px;
+        padding: 4px 0 0 8px;
+    }
+    &__icon{
+        color: #7e7e7e;
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    &__description{
+        margin-left: 30px;
+        font-size: 15px;
+    }
+    &:hover{
+        background-color: #f5edff;
+    }
+    &:hover > &__icon{
+        color: $colour-primary;
+    }
+}
+}

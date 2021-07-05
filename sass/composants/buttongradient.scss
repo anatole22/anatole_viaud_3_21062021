@@ -1,0 +1,13 @@
+@mixin button-gradient {
+    box-shadow: $shadow-button;
+    border-radius: 40px;
+    color: white;
+    font-size: 13px;
+    background: $background-gradient;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        filter: brightness(110%);
+        box-shadow: $shadow-button darken($color: lightgray, $amount: 10%);
+    }
+}

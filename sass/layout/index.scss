@@ -1,3 +1,63 @@
+/* header */
+.header__main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    animation: swipe 3s ease-in-out both;
+    &__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        background-color: white;
+        &__img{
+            height: 30px;
+            width: 170px;
+        }
+    }
+    &__div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        color: #4b4b4b;
+        background-color: #eaeaea;
+        box-shadow: 0px 5px 10px 0px rgba(207,207,207,0.98)inset;
+        &__icon{
+            margin-right: 20px;
+        }
+    }
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 270px;
+        width: 100%;
+        background-color: #f6f6f6;
+        &__title{
+            width: 230px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        &__description{
+            margin: 25px 0 35px 0;
+            width: 310px;
+            font-size: 15px;
+            text-align: center;
+        }
+        &__search{
+            width: 185px;
+            height: 50px;
+            @include button-gradient;
+        }    
+    }
+}
 /* fonctionnement */
 .fonctionnement{
     display: flex;
@@ -8,12 +68,19 @@
     max-width: 375px;
     margin: auto;
     animation: swipe 3s ease-in-out both;
+    @media(min-width:1050px){
+        height: 160px;
+        max-width: 1400px;
+}
     &__title{
-        margin-bottom: 30px;
+        padding: 0 0 30px 20px;
         align-self: flex-start;
-        margin-left: 20px;
         font-weight: bold;
         font-size: 20px;
+        @media(min-width:1050px){
+            width: 100%;
+            padding: 30px 20px 10px 20px;
+    }
     }
     &__list{
         height: 270px;
@@ -21,41 +88,13 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        &__button{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            height: 75px;
-            width: 320px;
-            background-color: #f6f6f6;
-            border-radius: 25px;
-            box-shadow: 0px 1px 15px 1px lightgray;
-            &__number{
-                background-color: $colour-primary;
-                color: white;
-                border-radius: 100%;
-                font-size: 15px;
-                height: 25px;
-                width: 25px;
-                margin-left: -12.5px;
-                padding: 4px 0 0 8px;
-            }
-            &__icon{
-                color: #7e7e7e;
-                margin-left: 20px;
-                font-size: 20px;
-            }
-            &__description{
-                margin-left: 30px;
-                font-size: 15px;
-            }
-            &:hover{
-                background-color: #f5edff;
-            }
-            &:hover > &__icon{
-                color: $colour-primary;
-            }
-        }
+        @include buttonfonctionnement;
+        @media(min-width:1050px){
+            flex-direction: row;
+            max-width: 1400px;
+            width: 100%;
+            padding: 0 20px 30px 20px;
+    }
     }
 }
 /* restaurant */
@@ -63,6 +102,12 @@
     background-color: #f6f6f6;
     height: 1220px;
     animation: swipe 3s ease-in-out both;
+    @media(min-width:700px){
+        height: 740px;
+}
+    @media(min-width:1400px){
+        height: 450px;
+}
 }
 .restaurant{
     display: flex;
@@ -73,56 +118,23 @@
     height: 100%;
     margin: auto;
     padding-bottom: 70px;
+    @media(min-width:700px){
+            max-width: 700px;
+            flex-direction: row;
+            flex-wrap: wrap;
+    }
+    @media(min-width:1400px){
+        max-width: 1400px;
+    }
     &__title{
         margin: 60px 0 0 20px;
         align-self: flex-start;
         font-weight: bold;
         font-size: 20px;
+        @media(min-width:700px){
+            width: 100%;
+            margin-left: 0;
     }
-    &__card{
-        display: flex;
-        flex-direction: column;
-        height: 250px;
-        width: 335px;
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 5px 5px 5px 1px lightgray;
-        &__img{
-            height: 175px;
-            &__back{
-                object-fit: cover;
-                border-radius: 15px 15px 0 0;
-                height: 100%;
-                width: 100%;
-            }
-            &__new{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 30px;
-                width: 80px;
-                background-color: $colour-tertairy;
-                color: darken($color: $colour-tertairy, $amount: 50%);
-                font-size: 15px;
-                border-radius: 5px;
-                position: relative;
-                top: -165px;
-                left: 245px;
-            }
-        }
-        &__name{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 75px;
-            width: 85%;
-            margin-left: 15PX;
-            &__description{
-                height: 40px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-        }
     }
+    @include buttoncard;
 }
