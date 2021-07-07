@@ -36,20 +36,25 @@
         align-items: center;
         background: $colour-tertairy;
         border-radius: 0 15px 15px 0;
-        width: 60px;
+        width: 90px;
         height: 70px;
-        margin-right: -60px;
+        margin-right: -90px;
         transition: 300ms ease-in-out;
         &__icon{
             background: $colour-tertairy;
             color: white;
             font-size: 30px;
             transform: rotate(-180deg);
+            animation-delay: 300ms;
             animation: cloche 200ms ease-in-out;
             }
     }
     &:hover > &__confirmation{
-        margin-right: 0;      
+        margin-right: 0;
+        &__icon{
+            transform: rotate(0);
+            color: red;
+        }      
     }
 }
 

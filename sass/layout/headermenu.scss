@@ -1,4 +1,6 @@
 .header{
+    max-width: 375px;
+    margin: auto;
     &__nav{ 
         display: flex;
         flex-direction: row;

@@ -114,9 +114,9 @@ p {
   align-items: center;
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
-  width: 60px;
+  width: 90px;
   height: 70px;
-  margin-right: -60px;
+  margin-right: -90px;
   transition: 300ms ease-in-out;
 }
 .button__confirmation__icon {
@@ -124,10 +124,15 @@ p {
   color: white;
   font-size: 30px;
   transform: rotate(-180deg);
+  animation-delay: 300ms;
   animation: cloche 200ms ease-in-out;
 }
 .button:hover > .button__confirmation {
   margin-right: 0;
+}
+.button:hover > .button__confirmation__icon {
+  transform: rotate(0);
+  color: red;
 }
 
 .plats {
@@ -136,15 +141,15 @@ p {
 
 @keyframes apparitionplats {
   0% {
-    height: 0px;
+    margin-top: 30px;
     opacity: 0%;
   }
   80% {
-    opacity: 60%;
+    opacity: 80%;
   }
   100% {
     opacity: 100%;
-    height: 290px;
+    margin-top: 0;
   }
 }
 .loader {
@@ -198,6 +203,10 @@ p {
   100% {
     transform: translateX(0);
   }
+}
+.header {
+  max-width: 375px;
+  margin: auto;
 }
 .header__nav {
   display: flex;
@@ -480,7 +489,9 @@ p {
   padding: 0.2rem;
 }
 .restaurant .card__name__heart:hover {
-  color: #9356DC;
+  background: -webkit-gradient(linear, left top, right bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
 .restaurant .card__name__heart:hover::before {
@@ -489,8 +500,14 @@ p {
   transition: color 200ms ease-out;
 }
 
-.menu {
+.background_menu {
   background: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  max-width: 375px;
+  margin: auto;
+}
+
+.menu {
   border-radius: 40px 40px 0 0;
   margin-top: -50px;
   display: flex;
