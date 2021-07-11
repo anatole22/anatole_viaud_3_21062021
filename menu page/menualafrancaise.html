@@ -12,14 +12,17 @@
         </nav>
         <div class="header__presentation"></div>
     </header>
-    <main class="background_menu">
+    <main class="background__menu">
         <article class="menu">
             <div class="menu__title">
                 <h1>À la française</h1>
-                <i class="far fa-heart fa-lg heart"></i>
+                <i class="far fa-heart fa-lg menu__title__heart"></i>
             </div>
+            <div class="entrer">
             <section class="plats">
-                <h2 class="plats__title">ENTRÉES</h2>
+                <div class="plats__title">
+                    <h2 class="plats__title__button">ENTRÉES</h2>
+                </div>
                 <button class="button">
                     <div class="button__description">
                         <h3 class="button__description__plat">Tartare de poulpe acidulé</h3>
@@ -57,8 +60,12 @@
                     </div>
                 </button>
             </section>
+            </div>
+            <div class="middle">
             <section class="plats">
-                <h2 class="plats__title">PLATS</h2>
+                <div class="plats__title">
+                    <h2 class="plats__title__button">PLATS</h2>
+                </div>
                 <button class="button">
                     <div class="button__description">
                         <h3 class="button__description__plat">Coquilles Saint-Jacques</h3>
@@ -96,8 +103,12 @@
                     </div>
                 </button>
             </section>
+            </div>
+            <div class="end">
             <section class="plats">
-                <h2 class="plats__title">DESSERTS</h2>
+                <div class="plats__title">
+                    <h2 class="plats__title__button">DESSERTS</h2>
+                </div>
                 <button class="button">
                     <div class="button__description">
                         <h3 class="button__description__plat">Pétales de violettes glacés</h3>
@@ -107,7 +118,7 @@
                         </div>
                     </div>
                     <div class="button__confirmation">
-                        <i class="fas fas fa-check-circle button__confirmation__icon"></i>
+                        <i class="fas fas fa-check-circle"></i>
                     </div>
                 </button>
                 <button class="button">
@@ -135,7 +146,10 @@
                     </div>
                 </button>
             </section>
-            <button class="menu__command">Commander</button>
+            </div>
+            <div class="menu__command">
+            <button class="menu__command__button">Commander</button>
+            </div>
         </article>
     </main>
     <footer class="footer__background">

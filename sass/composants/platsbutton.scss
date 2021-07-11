@@ -11,6 +11,8 @@
     padding: 0;
     cursor: pointer;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     &__description{
         width: 350px;
         height: 40px;
@@ -18,6 +20,9 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         &__plat{
             margin: 0 0 0 10px;
         }
@@ -26,7 +31,6 @@
             justify-content: space-between;
             align-items: center;
             width: 90%;
-            
             margin: 0 0 0 10px;
         }
     }
@@ -40,22 +44,21 @@
         height: 70px;
         margin-right: -90px;
         transition: 300ms ease-in-out;
-        &__icon{
+        & .fa-check-circle{
             background: $colour-tertairy;
             color: white;
             font-size: 30px;
-            transform: rotate(-180deg);
-            animation-delay: 300ms;
-            animation: cloche 200ms ease-in-out;
-            }
+            transition: transform 500ms ease-in-out;
+        }
     }
-    &:hover > &__confirmation{
-        margin-right: 0;
-        &__icon{
-            transform: rotate(0);
-            color: red;
-        }      
+    &:hover &__confirmation{
+        margin-right: 0;  
+        }
+    &:hover .fa-check-circle{
+        transform: rotate(360deg);
     }
 }
+
+
 
      

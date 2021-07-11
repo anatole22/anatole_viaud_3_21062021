@@ -1,26 +1,44 @@
-.background_menu{
+.background__menu{
     background:#f6f6f6;
     border-radius: 40px 40px 0 0;
-    max-width: 375px;
-    margin: auto;
 }
 .menu{
-    border-radius: 40px 40px 0 0;
+    max-width: 375px;
+    margin: auto;
     margin-top: -50px;
     display: flex;
     flex-direction: column;
+    @media(min-width:1126px){
+        max-width: 1440px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
     &__title{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 30px 35px 40px 20px;           
+        padding: 30px 35px 40px 20px;
+        &__heart{
+            @include heart;
+        }     
+        @media(min-width:1126px){
+            width: 100%;
+        }      
     }
     &__command{
-        align-self: center;
-        margin: 2.5px 0 80px 0;
-        width: 185px;
-        height: 50px;
-        @include button-gradient;
+        display: flex;
+        justify-content: center;
+        @media(min-width:1126px){
+            width: 100%;
+        }
+        &__button{
+            margin: 2.5px 0 80px 0;
+            width: 185px;
+            height: 50px;
+            @include button-gradient;
+        }
     }
 }
 .plats{
@@ -29,12 +47,22 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 40px 0;
+    margin: 0 12.5px 40px 12.5px;
+    flex-wrap: wrap;
+    @media(min-width:1100px){
+        max-width: 1440px;
+        align-items: flex-start;
+        
+        
+        
+    }
     &__title{
-        display: flex;
         align-self: flex-start;
         margin: 0 0 17.5px 20px;
-        border-bottom: solid $colour-tertairy 3px;
-        width: 40px;
+        width: 100%;
+        &__button{
+            width: 40px;
+            border-bottom: solid $colour-tertairy 3px;
+        }
         }
 }

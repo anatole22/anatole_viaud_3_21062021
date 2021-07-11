@@ -74,6 +74,7 @@ h3 {
 
 p {
   font-size: 0.85rem;
+  text-overflow: "...";
 }
 
 .button {
@@ -89,6 +90,8 @@ p {
   padding: 0;
   cursor: pointer;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .button__description {
   width: 350px;
@@ -97,6 +100,9 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .button__description__plat {
   margin: 0 0 0 10px;
@@ -119,35 +125,37 @@ p {
   margin-right: -90px;
   transition: 300ms ease-in-out;
 }
-.button__confirmation__icon {
+.button__confirmation .fa-check-circle {
   background: #99E2D0;
   color: white;
   font-size: 30px;
-  transform: rotate(-180deg);
-  animation-delay: 300ms;
-  animation: cloche 200ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
-.button:hover > .button__confirmation {
+.button:hover .button__confirmation {
   margin-right: 0;
 }
-.button:hover > .button__confirmation__icon {
-  transform: rotate(0);
-  color: red;
+.button:hover .fa-check-circle {
+  transform: rotate(360deg);
 }
 
-.plats {
-  animation: apparitionplats 2s ease-in-out;
+.entrer {
+  animation: apparitionplats 1s ease-in;
+}
+
+.middle {
+  animation: apparitionplats 1.5s ease-in;
+}
+
+.end {
+  animation: apparitionplats 2s ease-in;
 }
 
 @keyframes apparitionplats {
-  0% {
-    margin-top: 30px;
+  from {
+    margin-top: 10px;
     opacity: 0%;
   }
-  80% {
-    opacity: 80%;
-  }
-  100% {
+  to {
     opacity: 100%;
     margin-top: 0;
   }
@@ -204,15 +212,13 @@ p {
     transform: translateX(0);
   }
 }
-.header {
-  max-width: 375px;
-  margin: auto;
-}
 .header__nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 20px 0 10px 0;
+  padding: 20px 0 10px 0;
+  max-width: 375px;
+  margin: auto;
 }
 .header__nav__logo {
   display: flex;
@@ -500,18 +506,26 @@ p {
   transition: color 200ms ease-out;
 }
 
-.background_menu {
+/* footer */
+.background__menu {
   background: #f6f6f6;
   border-radius: 40px 40px 0 0;
-  max-width: 375px;
-  margin: auto;
 }
 
 .menu {
-  border-radius: 40px 40px 0 0;
+  max-width: 375px;
+  margin: auto;
   margin-top: -50px;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1126px) {
+  .menu {
+    max-width: 1440px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 .menu__title {
   display: flex;
@@ -519,8 +533,37 @@ p {
   align-items: center;
   padding: 30px 35px 40px 20px;
 }
+.menu__title__heart {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+.menu__title__heart:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.menu__title__heart:hover::before {
+  content: "";
+  font-weight: bold;
+  transition: color 200ms ease-out;
+}
+@media (min-width: 1126px) {
+  .menu__title {
+    width: 100%;
+  }
+}
 .menu__command {
-  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 1126px) {
+  .menu__command {
+    width: 100%;
+  }
+}
+.menu__command__button {
   margin: 2.5px 0 80px 0;
   width: 185px;
   height: 50px;
@@ -532,7 +575,7 @@ p {
   border: none;
   cursor: pointer;
 }
-.menu__command:hover {
+.menu__command__button:hover {
   filter: brightness(110%);
   box-shadow: 5px 5px 5px 1px lightgray #bababa;
 }
@@ -543,14 +586,23 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 40px 0;
+  margin: 0 12.5px 40px 12.5px;
+  flex-wrap: wrap;
+}
+@media (min-width: 1100px) {
+  .plats {
+    max-width: 1440px;
+    align-items: flex-start;
+  }
 }
 .plats__title {
-  display: flex;
   align-self: flex-start;
   margin: 0 0 17.5px 20px;
-  border-bottom: solid #99E2D0 3px;
+  width: 100%;
+}
+.plats__title__button {
   width: 40px;
+  border-bottom: solid #99E2D0 3px;
 }
 
 .footer__background {
@@ -581,6 +633,11 @@ p {
   flex-direction: column;
   justify-content: space-between;
   height: 100px;
+}
+@media (min-width: 700px) {
+  .footer__list {
+    align-items: center;
+  }
 }
 .footer__list__icon {
   width: 15px;
