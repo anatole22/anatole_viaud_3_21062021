@@ -21,10 +21,28 @@
             }
         }
     }
-    &__presentation{
+    &__presentation1{
         height: 260px;
         width: 100%;
         background-image: url(../../pictures/restaurant/alafrancaise.jpg);
+        background-size: cover;
+    }
+    &__presentation2{
+        height: 260px;
+        width: 100%;
+        background-image: url(../../pictures/restaurant/lanoteenchantee.jpg);
+        background-size: cover;
+    }
+    &__presentation3{
+        height: 260px;
+        width: 100%;
+        background-image: url(../../pictures/restaurant/lapalettedugout.jpg);
+        background-size: cover;
+    }
+    &__presentation4{
+        height: 260px;
+        width: 100%;
+        background-image: url(../../pictures/restaurant/ledelicedessens.jpg);
         background-size: cover;
     }
 }

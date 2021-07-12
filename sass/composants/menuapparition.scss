@@ -9,11 +9,11 @@
 }
 @keyframes apparitionplats {
     from {
-        margin-top: 10px;
+        transform: translateY(10px);
         opacity: 0%;
     }
     to{
         opacity: 100%;
-        margin-top: 0;
+        transform: translateY(0);
     }
 }

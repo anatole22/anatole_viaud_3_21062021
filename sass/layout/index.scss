@@ -139,5 +139,7 @@
     @include buttoncard;
 }
 /* footer */
-
+.footer__animation{
+    animation: swipe 3s ease-in-out both;
+}
     

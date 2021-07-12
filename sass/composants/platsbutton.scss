@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     background: white;
-    width: 350px;
+    width: 100%;
     height: 70px;
     border-radius: 15px;
     border: none;
@@ -11,7 +11,7 @@
     padding: 0;
     cursor: pointer;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: "...";
     white-space: nowrap;
     &__description{
         width: 350px;
