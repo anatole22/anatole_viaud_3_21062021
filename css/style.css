@@ -234,25 +234,29 @@ p {
   margin-left: 25px;
   margin-right: -35px;
 }
-.header__presentation1 {
+
+.presentation1 {
   height: 260px;
   width: 100%;
-  background-image: url(..\..\pictures\restaurant\alafrancaise.jpg);
+  background-image: url(../../pictures/restaurant/alafrancaise.jpg);
   background-size: cover;
 }
-.header__presentation2 {
+
+.presentation2 {
   height: 260px;
   width: 100%;
   background-image: url(../../pictures/restaurant/lanoteenchantee.jpg);
   background-size: cover;
 }
-.header__presentation3 {
+
+.presentation3 {
   height: 260px;
   width: 100%;
   background-image: url(../../pictures/restaurant/lapalettedugout.jpg);
   background-size: cover;
 }
-.header__presentation4 {
+
+.presentation4 {
   height: 260px;
   width: 100%;
   background-image: url(../../pictures/restaurant/ledelicedessens.jpg);
