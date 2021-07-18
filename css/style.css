@@ -237,7 +237,7 @@ p {
 .header__presentation1 {
   height: 260px;
   width: 100%;
-  background-image: url(../../pictures/restaurant/alafrancaise.jpg);
+  background-image: url(..\..\pictures\restaurant\alafrancaise.jpg);
   background-size: cover;
 }
 .header__presentation2 {
