@@ -1,48 +1,50 @@
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: white;
+    border-radius: 15px;
+    padding: 10px;
     width: 100%;
     height: 70px;
-    border-radius: 15px;
     border: none;
     box-shadow: 5px 5px 10px 1px lightgray;
-    padding: 0;
+    line-height: 25px;
+    position: relative;
     cursor: pointer;
     overflow: hidden;
-    text-overflow: "...";
+    text-overflow: ellipsis;
     white-space: nowrap;
-    &__description{
-        width: 350px;
-        height: 40px;
+    &__plat{
         display: flex;
-        flex-direction: column;
+        align-self: flex-start;
+        margin: 0;
+    }
+    &__description{
+        display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        &__plat{
-            margin: 0 0 0 10px;
+        align-items: center;
+        & p{
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
-        &__accompaniment{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-            margin: 0 0 0 10px;
+        & span{
+            box-sizing: border-box;
+            margin-right: 15px;
+            transition: 300ms ease-in-out;
         }
     }
     &__confirmation{
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        right: -60px;
+        top: 0;
         background: $colour-tertairy;
         border-radius: 0 15px 15px 0;
-        width: 90px;
+        width: 60px;
         height: 70px;
-        margin-right: -90px;
         transition: 300ms ease-in-out;
         & .fa-check-circle{
             background: $colour-tertairy;
@@ -52,10 +54,13 @@
         }
     }
     &:hover &__confirmation{
-        margin-right: 0;  
+        right: 0;  
         }
     &:hover .fa-check-circle{
         transform: rotate(360deg);
+    }
+    &:hover span {
+        margin-right: 60px;
     }
 }
 

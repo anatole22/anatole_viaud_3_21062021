@@ -1,11 +1,14 @@
 .entrer{
-    animation: apparitionplats  1s ease-in;
+    
+    animation: apparitionplats  1s 0s ease-in backwards;
 }
 .middle{
-    animation: apparitionplats  1.5s ease-in;
+    
+    animation: apparitionplats  1s 0.3s ease-in backwards;
 }
 .end{
-    animation: apparitionplats  2s ease-in;
+    
+    animation: apparitionplats  1s 0.6s ease-in backwards;
 }
 @keyframes apparitionplats {
     from {

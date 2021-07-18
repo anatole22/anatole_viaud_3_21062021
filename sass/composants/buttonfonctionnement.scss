@@ -4,10 +4,13 @@
     justify-content: flex-start;
     align-items: center;
     height: 75px;
-    width: 320px;
+    width: 100%;
     background-color: #f6f6f6;
     border-radius: 25px;
     box-shadow: $shadow-button;
+    @media(min-width:1050px){
+        width: 320px;
+    }
     &__number{
         background-color: $colour-primary;
         color: white;

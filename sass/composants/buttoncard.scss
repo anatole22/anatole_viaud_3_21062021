@@ -3,10 +3,13 @@
         display: flex;
         flex-direction: column;
         height: 250px;
-        width: 335px;
+        width: 100%;
         background-color: white;
         border-radius: 15px;
         box-shadow: $shadow-button;
+        @media(min-width:760px){
+            width: 340px;
+        }
         &__img{
             height: 175px;
             &__back{
