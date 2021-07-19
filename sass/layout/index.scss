@@ -1,5 +1,5 @@
 /* header */
-.header__main{
+.header-index{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,12 +12,12 @@
         height: 60px;
         width: 100%;
         background-color: white;
-        &__img{
+        img{
             height: 30px;
             width: 170px;
         }
     }
-    &__div{
+    &__icon{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -26,7 +26,7 @@
         color: #4b4b4b;
         background-color: #eaeaea;
         box-shadow: 0px 5px 10px 0px rgba(207,207,207,0.98)inset;
-        &__icon{
+        i{
             margin-right: 20px;
         }
     }
@@ -38,29 +38,29 @@
         height: 270px;
         width: 100%;
         background-color: #f6f6f6;
-        &__title{
+        h3{
             width: 100%;
             padding: 0 75px 0 75px;
             font-size: 20px;
             font-weight: bold;
             text-align: center;
         }
-        &__description{
+        p{
             width: 100%;
             margin: 25px 0 35px 0;
             padding: 0 20px 0 20px;
             font-size: 15px;
             text-align: center;
         }
-        &__search{
+        button{
             width: 185px;
             height: 50px;
-            @include button-gradient;
+            @include gradient-button;
         }    
     }
 }
 /* fonctionnement */
-.fonctionnement{
+.operation{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,7 +72,7 @@
         height: 160px;
         max-width: 1400px;
 }
-    &__title{
+    h3{
         padding: 0 0 30px 20px;
         align-self: flex-start;
         font-weight: bold;
@@ -90,7 +90,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        @include buttonfonctionnement;
+        @include operation-button;
         @media(min-width:1050px){
             flex-direction: row;
             max-width: 1400px;
@@ -100,7 +100,7 @@
     }
 }
 /* restaurant */
-.restaurant__background{
+.restaurant--background{
     background-color: #f6f6f6;
     height: 1220px;
     @media(min-width:760px){
@@ -128,7 +128,7 @@
     @media(min-width:1440px){
         max-width: 1440px;
     }
-    &__title{
+    h3{
         margin: 60px 0 0 20px;
         align-self: flex-start;
         font-weight: bold;
@@ -138,8 +138,8 @@
             margin-left: 0;
     }
     }
-    @include buttoncard;
+    @include card-button;
 }
-/* footer */
+
 
     

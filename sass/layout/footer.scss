@@ -1,18 +1,18 @@
-.footer__background{
+.footer--background{
     background: #353535;
     height: 200px;
 }
 .footer{
     display: flex;
     flex-direction: column;
-    color: white;
+    color: #fff;
     padding: 25px 0 0 25px;
     max-width: 375px;
     margin: auto;
     @media(min-width:1125px){
         align-items: center;
-}
-    &__logo{
+    }
+    h1{
         font-size: 1.1rem;
         margin-bottom: 25px;
     }
@@ -24,11 +24,11 @@
         @media(min-width:1125px){
             align-items: center;
     }
-        &__icon{
+        i{
             width: 15px;
             margin-right: 10px;
         }
-        &__mail{
+        a{
             color: white;
         }
     }

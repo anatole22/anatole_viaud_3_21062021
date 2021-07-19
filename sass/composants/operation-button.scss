@@ -1,5 +1,5 @@
-@mixin buttonfonctionnement {
-&__button{
+@mixin operation-button {
+.operation-button{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -11,7 +11,7 @@
     @media(min-width:1050px){
         width: 320px;
     }
-    &__number{
+    p{
         background-color: $colour-primary;
         color: white;
         border-radius: 100%;
@@ -21,19 +21,19 @@
         margin-left: -12.5px;
         padding: 4px 0 0 8px;
     }
-    &__icon{
+    i{
         color: #7e7e7e;
         margin-left: 20px;
         font-size: 20px;
     }
-    &__description{
+    h4{
         margin-left: 30px;
         font-size: 15px;
     }
     &:hover{
         background-color: #f5edff;
     }
-    &:hover > &__icon{
+    &:hover > i{
         color: $colour-primary;
     }
 }

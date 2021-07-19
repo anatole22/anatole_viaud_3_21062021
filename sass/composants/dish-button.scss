@@ -1,4 +1,4 @@
-.button {
+.dish-button {
     background: white;
     border-radius: 15px;
     padding: 10px;
@@ -12,7 +12,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    &__plat{
+    h4{
         display: flex;
         align-self: flex-start;
         margin: 0;
@@ -21,14 +21,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        & p{
+        p{
             margin: 0;
             position: relative;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-        & span{
+        span{
             box-sizing: border-box;
             margin-right: 15px;
             transition: 300ms ease-in-out;

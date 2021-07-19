@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-@import "./utils/variable.scss";
-@import "./base/resetcss.scss";
-@import "./base/normalize.scss";
+@import "./utils/utils.scss";
+@import "./base/base.scss";
 @import "./composants/composants.scss";
-@import "./layout/headermenu.scss";
-@import "./layout/index.scss";
-@import "./layout/acticlemenu.scss";
-@import "./layout/footer.scss";
+@import "./layout/layout.scss";

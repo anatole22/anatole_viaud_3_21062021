@@ -1,4 +1,4 @@
-.background__menu{
+.background--menu{
     background:#f6f6f6;
     border-radius: 40px 40px 0 0;
 }
@@ -19,7 +19,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 30px 35px 40px 20px;
-        &__heart{
+        i{
             @include heart;
             background-color: #f6f6f6;
         }     
@@ -27,7 +27,7 @@
             width: 100%;
         }      
     }
-    &__plats{
+    &__dish{
         height: 290px;
         width: 100%;
         padding: 10px;
@@ -44,25 +44,27 @@
             align-self: flex-start;
             padding: 0 0 5px 7px;
             width: 100%;
-            &__button{
+            h3{
                 width: 40px;
                 border-bottom: solid $colour-tertairy 3px;
                 padding-bottom: 5px;
             }
             }
     }
-    &__command{
+    &__order{
         display: flex;
         justify-content: center;
         @media(min-width:1125px){
             width: 100%;
         }
-        &__button{
+        button{
             margin: 50px 0 80px 0;
             width: 185px;
             height: 50px;
-            @include button-gradient;
+            @include gradient-button;
         }
     }
 }
-
+.four--dish{
+    height: 368px;
+}

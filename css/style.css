@@ -1,5 +1,25 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+/* loader */
+@keyframes load {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -55,7 +75,6 @@ html {
 
 body {
   margin: auto;
-  height: 100%;
 }
 
 h1 {
@@ -64,10 +83,15 @@ h1 {
 }
 
 h2 {
-  font-size: 1.1rem;
+  font-family: Shrikhand, sans-serif;
+  font-size: 1.8rem;
 }
 
 h3 {
+  font-size: 1.1rem;
+}
+
+h4 {
   font-weight: bold;
   font-size: 1rem;
 }
@@ -77,7 +101,7 @@ p {
   text-overflow: "...";
 }
 
-.button {
+.dish-button {
   background: white;
   border-radius: 15px;
   padding: 10px;
@@ -92,29 +116,29 @@ p {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.button__plat {
+.dish-button h4 {
   display: flex;
   align-self: flex-start;
   margin: 0;
 }
-.button__description {
+.dish-button__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.button__description p {
+.dish-button__description p {
   margin: 0;
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.button__description span {
+.dish-button__description span {
   box-sizing: border-box;
   margin-right: 15px;
   transition: 300ms ease-in-out;
 }
-.button__confirmation {
+.dish-button__confirmation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,31 +151,31 @@ p {
   height: 70px;
   transition: 300ms ease-in-out;
 }
-.button__confirmation .fa-check-circle {
+.dish-button__confirmation .fa-check-circle {
   background: #99E2D0;
   color: white;
   font-size: 30px;
   transition: transform 500ms ease-in-out;
 }
-.button:hover .button__confirmation {
+.dish-button:hover .dish-button__confirmation {
   right: 0;
 }
-.button:hover .fa-check-circle {
+.dish-button:hover .fa-check-circle {
   transform: rotate(360deg);
 }
-.button:hover span {
+.dish-button:hover span {
   margin-right: 60px;
 }
 
-.entrer {
+.first {
   animation: apparitionplats 1s 0s ease-in backwards;
 }
 
-.middle {
+.second {
   animation: apparitionplats 1s 0.3s ease-in backwards;
 }
 
-.end {
+.third {
   animation: apparitionplats 1s 0.6s ease-in backwards;
 }
 
@@ -196,25 +220,6 @@ p {
   }
 }
 
-@keyframes load {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
 .header__nav {
   display: flex;
   flex-direction: row;
@@ -264,14 +269,14 @@ p {
 }
 
 /* header */
-.header__main {
+.header-index {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
 }
-.header__main__logo {
+.header-index__logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -279,11 +284,11 @@ p {
   width: 100%;
   background-color: white;
 }
-.header__main__logo__img {
+.header-index__logo img {
   height: 30px;
   width: 170px;
 }
-.header__main__div {
+.header-index__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -293,10 +298,10 @@ p {
   background-color: #eaeaea;
   box-shadow: 0px 5px 10px 0px rgba(207, 207, 207, 0.98) inset;
 }
-.header__main__div__icon {
+.header-index__icon i {
   margin-right: 20px;
 }
-.header__main__nav {
+.header-index__nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -305,21 +310,21 @@ p {
   width: 100%;
   background-color: #f6f6f6;
 }
-.header__main__nav__title {
+.header-index__nav h3 {
   width: 100%;
   padding: 0 75px 0 75px;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
-.header__main__nav__description {
+.header-index__nav p {
   width: 100%;
   margin: 25px 0 35px 0;
   padding: 0 20px 0 20px;
   font-size: 15px;
   text-align: center;
 }
-.header__main__nav__search {
+.header-index__nav button {
   width: 185px;
   height: 50px;
   box-shadow: 5px 5px 5px 1px lightgray;
@@ -330,13 +335,13 @@ p {
   border: none;
   cursor: pointer;
 }
-.header__main__nav__search:hover {
+.header-index__nav button:hover {
   filter: brightness(110%);
   box-shadow: 5px 5px 5px 1px lightgray #bababa;
 }
 
 /* fonctionnement */
-.fonctionnement {
+.operation {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -346,24 +351,24 @@ p {
   margin: auto;
 }
 @media (min-width: 1050px) {
-  .fonctionnement {
+  .operation {
     height: 160px;
     max-width: 1400px;
   }
 }
-.fonctionnement__title {
+.operation h3 {
   padding: 0 0 30px 20px;
   align-self: flex-start;
   font-weight: bold;
   font-size: 20px;
 }
 @media (min-width: 1050px) {
-  .fonctionnement__title {
+  .operation h3 {
     width: 100%;
     padding: 30px 20px 10px 20px;
   }
 }
-.fonctionnement__list {
+.operation__list {
   height: 270px;
   width: 100%;
   padding: 0 20px 0 30px;
@@ -372,7 +377,7 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-.fonctionnement__list__button {
+.operation__list .operation-button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -383,11 +388,11 @@ p {
   box-shadow: 5px 5px 5px 1px lightgray;
 }
 @media (min-width: 1050px) {
-  .fonctionnement__list__button {
+  .operation__list .operation-button {
     width: 320px;
   }
 }
-.fonctionnement__list__button__number {
+.operation__list .operation-button p {
   background-color: #9356DC;
   color: white;
   border-radius: 100%;
@@ -397,23 +402,23 @@ p {
   margin-left: -12.5px;
   padding: 4px 0 0 8px;
 }
-.fonctionnement__list__button__icon {
+.operation__list .operation-button i {
   color: #7e7e7e;
   margin-left: 20px;
   font-size: 20px;
 }
-.fonctionnement__list__button__description {
+.operation__list .operation-button h4 {
   margin-left: 30px;
   font-size: 15px;
 }
-.fonctionnement__list__button:hover {
+.operation__list .operation-button:hover {
   background-color: #f5edff;
 }
-.fonctionnement__list__button:hover > .fonctionnement__list__button__icon {
+.operation__list .operation-button:hover > i {
   color: #9356DC;
 }
 @media (min-width: 1050px) {
-  .fonctionnement__list {
+  .operation__list {
     flex-direction: row;
     max-width: 1400px;
     width: 100%;
@@ -422,17 +427,17 @@ p {
 }
 
 /* restaurant */
-.restaurant__background {
+.restaurant--background {
   background-color: #f6f6f6;
   height: 1220px;
 }
 @media (min-width: 760px) {
-  .restaurant__background {
+  .restaurant--background {
     height: 740px;
   }
 }
 @media (min-width: 1440px) {
-  .restaurant__background {
+  .restaurant--background {
     height: 450px;
   }
 }
@@ -460,14 +465,14 @@ p {
     max-width: 1440px;
   }
 }
-.restaurant__title {
+.restaurant h3 {
   margin: 60px 0 0 20px;
   align-self: flex-start;
   font-weight: bold;
   font-size: 20px;
 }
 @media (min-width: 760px) {
-  .restaurant__title {
+  .restaurant h3 {
     width: 100%;
     margin-left: 0;
   }
@@ -486,16 +491,16 @@ p {
     width: 340px;
   }
 }
-.restaurant .card__img {
+.restaurant .card__picture {
   height: 175px;
 }
-.restaurant .card__img__back {
+.restaurant .card__picture img {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
   height: 100%;
   width: 100%;
 }
-.restaurant .card__img__new {
+.restaurant .card__picture p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -509,7 +514,7 @@ p {
   top: -165px;
   left: 245px;
 }
-.restaurant .card__name {
+.restaurant .card__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -517,31 +522,30 @@ p {
   width: 85%;
   margin-left: 15PX;
 }
-.restaurant .card__name__description {
+.restaurant .card__title__description {
   height: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.restaurant .card__name__heart {
+.restaurant .card__title i {
   background-color: white;
   border-radius: 50%;
   padding: 0.2rem;
 }
-.restaurant .card__name__heart:hover {
+.restaurant .card__title i:hover {
   background: -webkit-gradient(linear, left top, right bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
-.restaurant .card__name__heart:hover::before {
+.restaurant .card__title i:hover::before {
   content: "";
   font-weight: bold;
   transition: color 200ms ease-out;
 }
 
-/* footer */
-.background__menu {
+.background--menu {
   background: #f6f6f6;
   border-radius: 40px 40px 0 0;
 }
@@ -567,19 +571,19 @@ p {
   align-items: center;
   padding: 30px 35px 40px 20px;
 }
-.menu__title__heart {
+.menu__title i {
   background-color: white;
   border-radius: 50%;
   padding: 0.2rem;
   background-color: #f6f6f6;
 }
-.menu__title__heart:hover {
+.menu__title i:hover {
   background: -webkit-gradient(linear, left top, right bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
-.menu__title__heart:hover::before {
+.menu__title i:hover::before {
   content: "";
   font-weight: bold;
   transition: color 200ms ease-out;
@@ -589,7 +593,7 @@ p {
     width: 100%;
   }
 }
-.menu__plats {
+.menu__dish {
   height: 290px;
   width: 100%;
   padding: 10px;
@@ -599,32 +603,32 @@ p {
   align-items: center;
 }
 @media (min-width: 1125px) {
-  .menu__plats {
+  .menu__dish {
     width: 375px;
     max-width: 1440px;
     align-items: flex-start;
   }
 }
-.menu__plats__title {
+.menu__dish__title {
   align-self: flex-start;
   padding: 0 0 5px 7px;
   width: 100%;
 }
-.menu__plats__title__button {
+.menu__dish__title h3 {
   width: 40px;
   border-bottom: solid #99E2D0 3px;
   padding-bottom: 5px;
 }
-.menu__command {
+.menu__order {
   display: flex;
   justify-content: center;
 }
 @media (min-width: 1125px) {
-  .menu__command {
+  .menu__order {
     width: 100%;
   }
 }
-.menu__command__button {
+.menu__order button {
   margin: 50px 0 80px 0;
   width: 185px;
   height: 50px;
@@ -636,12 +640,16 @@ p {
   border: none;
   cursor: pointer;
 }
-.menu__command__button:hover {
+.menu__order button:hover {
   filter: brightness(110%);
   box-shadow: 5px 5px 5px 1px lightgray #bababa;
 }
 
-.footer__background {
+.four--dish {
+  height: 368px;
+}
+
+.footer--background {
   background: #353535;
   height: 200px;
 }
@@ -649,7 +657,7 @@ p {
 .footer {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #fff;
   padding: 25px 0 0 25px;
   max-width: 375px;
   margin: auto;
@@ -659,7 +667,7 @@ p {
     align-items: center;
   }
 }
-.footer__logo {
+.footer h1 {
   font-size: 1.1rem;
   margin-bottom: 25px;
 }
@@ -674,11 +682,11 @@ p {
     align-items: center;
   }
 }
-.footer__list__icon {
+.footer__list i {
   width: 15px;
   margin-right: 10px;
 }
-.footer__list__mail {
+.footer__list a {
   color: white;
 }
 
