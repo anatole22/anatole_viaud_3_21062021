@@ -18,33 +18,15 @@
             margin-right: -35px;
         }
     }
-}
-.presentation{
+    &__presentation{
         height: 260px;
         width: 100%;
-        img {
-                height: 260px;
-                width: 100%;
-                object-fit: cover;
-                position: relative;
-                z-index: -1;
+        img{
+        height: 260px;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
         }    
-}
-.presentation2{
-        height: 260px;
-        width: 100%;
-        background-image: url(../../pictures/restaurant/lanoteenchantee.jpg);
-        background-size: cover;
-}
-.presentation3{
-        height: 260px;
-        width: 100%;
-        background-image: url(../../pictures/restaurant/lapalettedugout.jpg);
-        background-size: cover;
-}
-.presentation4{
-        height: 260px;
-        width: 100%;
-        background-image: url(../../pictures/restaurant/ledelicedessens.jpg);
-        background-size: cover;
+        }
 }
