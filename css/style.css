@@ -20,6 +20,17 @@
     transform: rotate(-360deg);
   }
 }
+@keyframes scrollbar {
+  0% {
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -75,6 +86,7 @@ html {
 
 body {
   margin: auto;
+  animation: scrollbar 3s both;
 }
 
 h1 {
@@ -310,7 +322,7 @@ p {
 .header-index__nav button {
   width: 185px;
   height: 50px;
-  box-shadow: 5px 5px 5px 1px lightgray;
+  box-shadow: 5px 5px 5px 1px #d3d3d3;
   border-radius: 40px;
   color: white;
   font-size: 13px;
@@ -320,7 +332,7 @@ p {
 }
 .header-index__nav button:hover {
   filter: brightness(110%);
-  box-shadow: 5px 5px 5px 1px lightgray #bababa;
+  box-shadow: 5px 5px 5px 1px #a0a0a0;
 }
 
 /* fonctionnement */
@@ -368,7 +380,7 @@ p {
   width: 100%;
   background-color: #f6f6f6;
   border-radius: 25px;
-  box-shadow: 5px 5px 5px 1px lightgray;
+  box-shadow: 5px 5px 5px 1px #d3d3d3;
 }
 @media (min-width: 1050px) {
   .operation__list .operation-button {
@@ -467,7 +479,7 @@ p {
   width: 100%;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 5px 5px 5px 1px lightgray;
+  box-shadow: 5px 5px 5px 1px #d3d3d3;
 }
 @media (min-width: 760px) {
   .restaurant .card {
@@ -476,6 +488,7 @@ p {
 }
 .restaurant .card__picture {
   height: 175px;
+  overflow: hidden;
 }
 .restaurant .card__picture img {
   object-fit: cover;
@@ -494,8 +507,8 @@ p {
   font-size: 15px;
   border-radius: 5px;
   position: relative;
-  top: -165px;
-  left: 245px;
+  left: 240px;
+  bottom: 165px;
 }
 .restaurant .card__title {
   display: flex;
@@ -615,7 +628,7 @@ p {
   margin: 50px 0 80px 0;
   width: 185px;
   height: 50px;
-  box-shadow: 5px 5px 5px 1px lightgray;
+  box-shadow: 5px 5px 5px 1px #d3d3d3;
   border-radius: 40px;
   color: white;
   font-size: 13px;
@@ -625,7 +638,7 @@ p {
 }
 .menu__order button:hover {
   filter: brightness(110%);
-  box-shadow: 5px 5px 5px 1px lightgray #bababa;
+  box-shadow: 5px 5px 5px 1px #a0a0a0;
 }
 
 .four--dish {

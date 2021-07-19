@@ -1,6 +1,9 @@
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
-$colour-tertairy: #99E2D0;
+$colour-tertiary: #99E2D0;
+$colour-shadow: #d3d3d3;
+$colour-shadow10: darken($color: #d3d3d3, $amount: 20%);
 
 $background-gradient: linear-gradient(-45deg, $colour-primary,$colour-secondary);
-$shadow-button: 5px 5px 5px 1px lightgray;
+$shadow-button: 5px 5px 5px 1px $colour-shadow;
+$shadow-button10: 5px 5px 5px 1px $colour-shadow10;

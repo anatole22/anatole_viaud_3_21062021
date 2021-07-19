@@ -21,3 +21,14 @@
         transform: rotate(-360deg);
     }
 }
+@keyframes scrollbar {
+    0%{
+        overflow: hidden;
+    }
+    99%{
+        overflow: hidden;
+    }
+    100%{
+        overflow: visible;
+    }
+}

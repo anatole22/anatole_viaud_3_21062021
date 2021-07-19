@@ -8,6 +8,6 @@
     cursor: pointer;
     &:hover{
         filter: brightness(110%);
-        box-shadow: $shadow-button darken($color: lightgray, $amount: 10%);
+        box-shadow: $shadow-button10;
     }
 }

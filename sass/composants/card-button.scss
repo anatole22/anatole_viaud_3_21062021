@@ -12,6 +12,8 @@
         }
         &__picture{
             height: 175px;
+            overflow: hidden;
+            
             img{
                 object-fit: cover;
                 border-radius: 15px 15px 0 0;
@@ -24,13 +26,13 @@
                 align-items: center;
                 height: 30px;
                 width: 80px;
-                background-color: $colour-tertairy;
-                color: darken($color: $colour-tertairy, $amount: 50%);
+                background-color: $colour-tertiary;
+                color: darken($color: $colour-tertiary, $amount: 50%);
                 font-size: 15px;
                 border-radius: 5px;
                 position: relative;
-                top: -165px;
-                left: 245px;
+                left: 240px;
+                bottom: 165px;
             }
         }
         &__title{
