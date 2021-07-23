@@ -185,6 +185,50 @@ p {
   font-weight: bold;
 }
 
+.operation-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px 1px #d3d3d3;
+  transition: background-color 300ms ease-in-out;
+  cursor: pointer;
+}
+@media (min-width: 1050px) {
+  .operation-button {
+    width: 320px;
+  }
+}
+.operation-button p {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 100%;
+  font-size: 15px;
+  height: 25px;
+  width: 25px;
+  margin-left: -12.5px;
+  padding: 4px 0 0 8px;
+}
+.operation-button i {
+  color: #7e7e7e;
+  margin-left: 20px;
+  font-size: 20px;
+  transition: color 300ms ease-in-out;
+}
+.operation-button h4 {
+  margin-left: 30px;
+  font-size: 15px;
+}
+.operation-button:hover {
+  background-color: #f5edff;
+}
+.operation-button:hover > i {
+  color: #9356DC;
+}
+
 .dish-button {
   background: white;
   border-radius: 15px;
@@ -444,48 +488,6 @@ p {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-}
-.operation__list .operation-button {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 75px;
-  width: 100%;
-  background-color: #f6f6f6;
-  border-radius: 25px;
-  box-shadow: 5px 5px 5px 1px #d3d3d3;
-  transition: background-color 300ms ease-in-out;
-}
-@media (min-width: 1050px) {
-  .operation__list .operation-button {
-    width: 320px;
-  }
-}
-.operation__list .operation-button p {
-  background-color: #9356DC;
-  color: white;
-  border-radius: 100%;
-  font-size: 15px;
-  height: 25px;
-  width: 25px;
-  margin-left: -12.5px;
-  padding: 4px 0 0 8px;
-}
-.operation__list .operation-button i {
-  color: #7e7e7e;
-  margin-left: 20px;
-  font-size: 20px;
-  transition: color 300ms ease-in-out;
-}
-.operation__list .operation-button h4 {
-  margin-left: 30px;
-  font-size: 15px;
-}
-.operation__list .operation-button:hover {
-  background-color: #f5edff;
-}
-.operation__list .operation-button:hover > i {
-  color: #9356DC;
 }
 @media (min-width: 1050px) {
   .operation__list {

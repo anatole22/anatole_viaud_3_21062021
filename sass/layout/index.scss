@@ -78,7 +78,6 @@
         padding: 0 20px 0 30px;
         @include flex-between-center;
         flex-direction: column;
-        @include operation-button;
         @media(min-width:1050px){
             flex-direction: row;
             max-width: 1400px;
