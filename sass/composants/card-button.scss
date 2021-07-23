@@ -1,56 +1,49 @@
-@mixin card-button {
-    .card{
-        display: flex;
-        flex-direction: column;
-        height: 250px;
-        width: 100%;
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: $shadow-button;
-        @media(min-width:760px){
-            width: 340px;
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: $shadow-button;
+    @media(min-width:760px){
+        width: 340px;
+    }
+    &__picture{
+        height: 175px;
+        overflow: hidden;
+        img{
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            height: 100%;
+            width: 100%;
         }
-        &__picture{
-            height: 175px;
-            overflow: hidden;
-            
-            img{
-                object-fit: cover;
-                border-radius: 15px 15px 0 0;
-                height: 100%;
-                width: 100%;
-            }
-            p{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 30px;
-                width: 80px;
-                background-color: $colour-tertiary;
-                color: darken($color: $colour-tertiary, $amount: 50%);
-                font-size: 15px;
-                border-radius: 5px;
-                position: relative;
-                left: 240px;
-                bottom: 165px;
-            }
+        p{
+            @include flex-center;
+            height: 30px;
+            width: 80px;
+            background-color: $colour-tertiary;
+            color: darken($color: $colour-tertiary, $amount: 50%);
+            font-size: 15px;
+            border-radius: 5px;
+            position: relative;
+            left: 72%;
+            bottom: 95%;
         }
-        &__title{
+    }
+    &__title{
+        @include flex-between-center;
+        height: 75px;
+        width: 85%;
+        margin-left: 15PX;
+        &__description{
+            height: 40px;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
-            height: 75px;
-            width: 85%;
-            margin-left: 15PX;
-            &__description{
-                height: 40px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-            i{
-                @include heart;
-            }
+        }
+        i{
+            @include heart;
         }
     }
 }

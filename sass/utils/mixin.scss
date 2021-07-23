@@ -1,0 +1,50 @@
+/* heart */
+@mixin heart{
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.2rem;
+    &:hover{ 
+        background: $background-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+        &::before{
+            content: "\f004";
+            font-weight: bold; 
+        }
+    }   
+}
+/* gradient-button */
+@mixin gradient-button {
+    box-shadow: $shadow-button;
+    border-radius: 40px;
+    color: white;
+    font-size: 13px;
+    background: $background-gradient;
+    border: none;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    transition-property: filter,box-shadow;
+    &:hover{
+        filter: brightness(110%);
+        box-shadow: $shadow-button10;
+    }
+}
+/* flex center */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* flex between center */
+@mixin flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* flex start center */
+@mixin flex-start-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

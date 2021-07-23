@@ -1,26 +1,19 @@
+/* body */
+.body-bar{
+    animation: scrollbar 3000ms both;
+}
 /* header */
 .header-index{
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding-top: 20px;
     &__logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 60px;
-        width: 100%;
+        @include flex-center;
         background-color: white;
-        img{
-            height: 30px;
-            width: 170px;
-        }
+        padding-bottom: 10px;
     }
     &__icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         height: 50px;
         width: 100%;
         color: #4b4b4b;
@@ -31,19 +24,18 @@
         }
     }
     &__nav{
-        display: flex;
+        @include flex-center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         height: 270px;
         width: 100%;
         background-color: #f6f6f6;
-        h3{
+        h2{
             width: 100%;
             padding: 0 75px 0 75px;
             font-size: 20px;
             font-weight: bold;
             text-align: center;
+            font-family: roboto;
         }
         p{
             width: 100%;
@@ -61,10 +53,8 @@
 }
 /* fonctionnement */
 .operation{
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 440px;
     max-width: 375px;
     margin: auto;
@@ -86,10 +76,8 @@
         height: 270px;
         width: 100%;
         padding: 0 20px 0 30px;
-        display: flex;
+        @include flex-between-center;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
         @include operation-button;
         @media(min-width:1050px){
             flex-direction: row;
@@ -111,10 +99,8 @@
 }
 }
 .restaurant{
-    display: flex;
+    @include flex-between-center;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     max-width: 375px;
     height: 100%;
     padding: 0 20px 0 20px;
@@ -138,7 +124,6 @@
             margin-left: 0;
     }
     }
-    @include card-button;
 }
 
 
