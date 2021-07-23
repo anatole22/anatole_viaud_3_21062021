@@ -1,6 +1,7 @@
 # Projet 3 du parcours Développeur web d'OpenClassrooms : Dynamiser un site web avec des animations CSS
-![Screenshot](./pictures/acceuil.png)
+
 ## Compétences évaluées
+
 
 - Mettre en œuvre des effets CSS graphiques avancés
 - Assurer la cohérence graphique d'un site web
